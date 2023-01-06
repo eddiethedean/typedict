@@ -17,7 +17,7 @@ class TypeDict(UserDict):
 
 
 def _gettype(value) -> type:
-    if type(value) is type:
+    if isinstance(value, type):
         return value
     else:
         return type(value)

@@ -2,10 +2,6 @@ from collections import UserDict
 from typing import Any, Hashable
 
 
-class HashableType(Hashable, type):
-    ...
-
-
 class TypeDict(UserDict):
     def __getitem__(self, key: Hashable) -> Any:
         _key = _gettype(key)
